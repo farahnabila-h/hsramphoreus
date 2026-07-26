@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>cyreneabilities</title>
+<link href="../CSS/cyrene.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="menu">
+		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+	</div>
+	<div id="bg">
+		<img src="cyrene/bg.png" width="105%" height="10%">
+	</div>
+	
+	<div id="box">
+		<div id="banner">
+			<img src="cyrene/cyrenebanner.png" width="100%">
+		</div>
+		
+		<div id="navigation">
+			<a href="cyreneinfo.html#info">CHARACTER INFO</a>
+			<a href="cyreneabilities.html#abilities">ABILITIES</a>
+			<a href="cyrenebuild.html#build">BUILD</a>
+			<a href="cyreneeidolons.html#eidolons">EIDOLONS</a>
+			<a href="cyreneteam.html#team">TEAM COMPS</a>
+		</div>
+		
+		<div id="abilities">
+			<h2>ABILITIES</h2>
+		</div>
+
+		<div class="abilities-container">
+			
+			<div class="sidebar-tabs">
+				<button class="tablinks active" onclick="openAbility(event, 'basic-attack')">Basic Attack</button>
+				<button class="tablinks" onclick="openAbility(event, 'skill')">Skill</button>
+				<button class="tablinks" onclick="openAbility(event, 'ultimate')">Ultimate</button>
+				<button class="tablinks" onclick="openAbility(event, 'technique')">Technique</button>
+				<button class="tablinks" onclick="openAbility(event, 'talent')">Talent</button>
+				<button class="tablinks" onclick="openAbility(event, 'memosprite')">Memosprite</button>
+				<button class="tablinks" onclick="openAbility(event, 'ascension')">Ascension Bonus</button>
+			</div>
+
+			<div class="content-panel">
+				
+				<div id="basic-attack" class="tabcontent" style="display: block;">
+					<div class="ability-header">
+						<img src="cyrene/cyreneba.png" width="65px">
+						<div>
+							<h3>Lo, Hope Takes Flight!</h3>
+							<span class="ability-type">Basic Attack</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="cyrene/cyreneba.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Single Target]</p>
+					<p class="ability-stat"><strong>Toughness Break: 10</strong></p>
+					<p class="ability-desc">Gains 1 "Recollection" point(s) and deals <span class="highlight-dmg">Ice DMG</span> equal to <strong>25%/ 50%</strong> of Cyrene's Max HP to one designated enemy.</p>
+				</div>
+
+				<div id="skill" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="cyrene/cyreneskill.png" width="65px">
+						<div>
+							<h3>Bloom, Elysium of Beyond</h3>
+							<span class="ability-type">Skill</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="cyrene/cyreneskill.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Support]</p>
+					<p class="ability-desc">Gains 3 "Recollection" point(s) and deploys a Zone that lasts for 2 turns. The Zone's duration decreases by 1 at the start of Cyrene's every turn. While the Zone lasts, for each instance of DMG dealt by all ally targets, deals 1 additional instance of True DMG equal to <strong>12%/ 24%</strong> of the original DMG. When Cyrene is downed, the Zone will also be dispelled.</p>
+				</div>
+
+				<div id="ultimate" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="cyrene/cyreneult.png" width="65px">
+						<div>
+							<h3>Verse ◦ Vow ∞</h3>
+							<span class="ability-type">Ultimate</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="cyrene/cyreneult.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Summon]</p>
+					<p class="ability-desc">Summons memosprite Demiurge, causes it to immediately gain 1 extra turn, and activates all teammates' Ultimate. Then, enters the "Ripples of Past Reverie" state. Enhances Basic ATK to "To Love and Tomorrow ♪" and can only use this Basic ATK. Increases Cyrene's and Demiurge's CRIT Rate by <strong>25%/ 50%</strong>, and deploys the Zone effect from Skill with no duration limit. Can only be used once per battle. Demiurge's initial Max HP equals to 100% of Cyrene's Max HP.</p>
+				</div>
+
+				<div id="technique" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="cyrene/cyrenetech.png" width="65px">
+						<div>
+							<h3>Peace at West Wind's End</h3>
+							<span class="ability-type">Technique</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="cyrene/cyrenetech.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Support]</p>
+					<p class="ability-desc">After using Technique, creates a Special Dimension that lasts for 30 second(s) around the character. Enemies within this Special Dimension enter the "This Moment, Forever" state. While in this state, enemies will cease all actions. Ally characters within this Special Dimension have 50% increased movement speed. After entering combat within the duration, deploys the Skill's Zone. Only 1 Dimension Effect created by allies can exist at the same time.</p>
+				</div>
+
+				<div id="talent" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="cyrene/cyrenetalent.png" width="65px">
+						<div>
+							<h3>Hearts Gather as One</h3>
+							<span class="ability-type">Talent</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="cyrene/cyrenetalent.webp" width="80%">
+					</div>
+					<p class="ability-tag">[Enhance]</p>
+					<p class="ability-desc">When combat begins or after Cyrene takes action, other ally characters under any state and their memosprites gain "Future." When ally targets with "Future" take action, consumes "Future" to grant Cyrene 1 "Recollection" point(s). When Cyrene has 24 "Recollection" points, can activate Ultimate and dispel all debuffs on her. When she has 12 "Recollection" points during the "Ripples of Past Reverie" state, can activate Ultimate. After reaching the maximum, it can overflow by up to 27 points. While Cyrene is on the field, increases DMG dealt by all ally targets by <strong>10%/ 20%</strong>.</p>
+				</div>
+
+				<div id="memosprite" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="cyrene/demiskill.png" width="65px">
+						<div>
+							<h3>Minuet of Blooms and Plumes</h3>
+							<span class="ability-type">Memosprite Skill</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="cyrene/demiskill.gif" width="80%">
+					</div>
+					<p class="ability-tag">[AoE]</p>
+					<p class="ability-stat"><strong>Toughness Reduction: 30</strong></p>
+					<p class="ability-desc">Deals <span class="highlight-dmg">Ice DMG</span> to all enemies equal to <strong>30%/ 60%</strong> of Demiurge's Max HP.</p>
+						
+					<div class="ability-sub-section">
+						<h3 class="sub-title">This Ode, To All Lives [Support]</h3>
+						<div class="ability-image">
+						<img src="cyrene/demiskill2.gif" width="80%">
+						</div>
+						<p class="ability-tag">[AoE]</p>
+						<p class="ability-stat"><strong>Toughness Reduction: 30</strong></p>
+						<p class="ability-desc">Applies a buff to one designated ally character. When the character is a Chrysos Heir, the target gains a special effect. When the character is not a Chrysos Heir, increases the target's DMG dealt by 20% for 2 turns. This effect also applies on memosprites.</p>
+					</div>
+
+					<div class="ability-header sub-header">
+						<img src="cyrene/demitalent.png" width="65px">
+						<div>
+							<h3>Waiting, In Every Past</h3>
+							<span class="ability-type">Memosprite Talent</span>
+						</div>
+					</div>
+					<p class="ability-tag">[Enhance]</p>
+					<p class="ability-desc">Demiurge's SPD remains at 0, and it will not appear on the Action Order. While on the field, it is considered as Out-of-Bounds. When Cyrene's HP percentage changes, Demiurge's HP percentage will also change accordingly. While Demiurge is on the field, Cyrene's and Demiurge's Max HP increases by <strong>12%/ 24%</strong>. After Demiurge uses abilities, decreases the duration of all Continuous Effects on this unit by 1.</p>
+
+					<div class="ability-sub-section">
+						<h3 class="sub-title">"Hello, World ♪"</h3>
+						<p class="ability-tag">[Enhance]</p>
+						<p class="ability-desc">When Demiurge is summoned, dispels Crowd Control debuffs from all allies.</p>
+					</div>
+				</div>
+
+				<div id="ascension" class="tabcontent" style="display: none;">
+					<div class="abilityheaderasc">
+						<img src="cyrene/cyrenea2.png" width="80px">
+						<div>
+							<h3>ASCENSION 2</h3>
+							<span class="ascname">Child of Remembrance</span>
+							<p class="ability-desc">When a teammate's memosprite is summoned, it gains "Future." "Future" held by memosprites cannot be consumed.</p>
+						</div>
+					</div>
+					
+					<div class="abilityheaderasc">
+						<img src="cyrene/cyrenea4.png" width="80px">
+						<div>
+							<h3>ASCENSION 4</h3>
+							<span class="ascname">Ripples Across Time</span>
+							<p class="ability-desc">When there are 1/2/3 Chrysos Heir(s) or Remembrance Path character(s) aside from Cyrene in the team, Cyrene gains 2/3/6 "Recollection" point(s) at the start of combat.</p>
+						</div>
+					</div>
+					
+					<div class="abilityheaderasc">
+						<img src="cyrene/cyrenea6.png" width="80px">
+						<div>
+							<h3>ASCENSION 6</h3>
+							<span class="ascname">Causality in Trichotomy</span>
+							<p class="ability-desc">When Cyrene's SPD is at 180 or higher, increases all allies' DMG dealt by 20%. Then, for each point of SPD exceeded, increases Cyrene and Mem's Ice RES PEN by 2%, counting up to a maximum of 60 exceeded SPD points.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+			
+		<div id="box2">
+		</div>	
+		
+	</div>
+
+<script>
+function openAbility(evt, abilityName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(abilityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>

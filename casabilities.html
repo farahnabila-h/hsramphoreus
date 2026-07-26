@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>casabilities</title>
+<link href="../CSS/cas.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="menu">
+		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+	</div>
+	<div id="bg">
+		<img src="castorice/bg.png" width="105%" height="10%">
+	</div>
+	
+	<div id="box">
+		<div id="banner">
+			<img src="castorice/casbanner.png" width="100%">
+		</div>
+		
+		<div id="navigation">
+			<a href="casinfo.html#info">CHARACTER INFO</a>
+			<a href="casabilities.html#abilities">ABILITIES</a>
+			<a href="casbuild.html#build">BUILD</a>
+			<a href="caseidolons.html#eidolons">EIDOLONS</a>
+			<a href="casteam.html#team">TEAM COMPS</a>
+		</div>
+		
+		<div id="abilities">
+			<h2>ABILITIES</h2>
+		</div>
+
+		<div class="abilities-container">
+			
+			<div class="sidebar-tabs">
+				<button class="tablinks active" onclick="openAbility(event, 'basic-attack')">Basic Attack</button>
+				<button class="tablinks" onclick="openAbility(event, 'skill')">Skill</button>
+				<button class="tablinks" onclick="openAbility(event, 'ultimate')">Ultimate</button>
+				<button class="tablinks" onclick="openAbility(event, 'technique')">Technique</button>
+				<button class="tablinks" onclick="openAbility(event, 'talent')">Talent</button>
+				<button class="tablinks" onclick="openAbility(event, 'memosprite')">Memosprite</button>
+				<button class="tablinks" onclick="openAbility(event, 'ascension')">Ascension Bonus</button>
+			</div>
+
+			<div class="content-panel">
+				
+				<div id="basic-attack" class="tabcontent" style="display: block;">
+					<div class="ability-header">
+						<img src="castorice/casba.png" width="65px">
+						<div>
+							<h3>Lament, Nethersea's Ripple</h3>
+							<span class="ability-type">Basic Attack</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="castorice/casba.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Single Target]</p>
+					<p class="ability-stat"><strong>Toughness Break: 10</strong></p>
+					<p class="ability-desc">Deals <span class="highlight-dmg">Quantum DMG</span> equal to <strong>25%/ 50%</strong> of Castorice's Max HP to one designated enemy.</p>
+				</div>
+
+				<div id="skill" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="castorice/casskill.png" width="65px">
+						<div>
+							<h3>Silence, Wraithfly's Caress</h3>
+							<span class="ability-type">Skill</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="castorice/casskill.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Blast]</p>
+					<p class="ability-stat"><strong>Toughness Break: 20</strong></p>
+					<p class="ability-desc">Consumes 30% of all allies' current HP. Deals <span class="highlight-dmg">Quantum DMG</span> equal to <strong>25%/ 46%</strong> of Castorice's Max HP to one designated enemy and <span class="highlight-dmg">Quantum DMG</span> equal to <strong>15% / 28%</strong> of Castorice's Max HP to adjacent targets. If the current HP is insufficient, reduces the current HP down to 1. If Netherwing is on the battlefield, the Skill becomes "Boneclaw, Doomdrake's Embrace" instead.</p>
+				
+					<div class="ability-sub-section">
+						<h3 class="sub-title">Boneclaw, Doomdrake's Embrace</h3>
+						<p class="ability-tag">[AoE]</p>
+						<p class="ability-stat"><strong>Toughness Reduction: 20</strong></p>
+						<p class="ability-desc">Launching "Breath Scorches the Shadow" will consume 25% of Netherwing's Max HP to deal <span class="highlight-dmg">Quantum DMG</span> equal to <strong>12%-24%</strong> of Castorice's Max HP to all enemies. In one attack, "Breath Scorches the Shadow" can be launched repeatedly, with the DMG multiplier increased progressively to <strong>14% / 17%-28% / 34%</strong>. After reaching <strong>17%-34%</strong>, it will not increase further. The DMG Multiplier Boost effect will not decrease before Netherwing disappears. When Netherwing's current HP is equal to or less than 25% of its Max HP, launching this ability will actively reduce HP down to 1, and then trigger the ability effect equal to that of the Talent "Wings Sweep the Ruins."</p>
+					</div>
+				</div>
+
+				<div id="ultimate" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="castorice/casult.png" width="65px">
+						<div>
+							<h3>Doomshriek, Dawn's Chime</h3>
+							<span class="ability-type">Ultimate</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="castorice/casult.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Summon]</p>
+					<p class="ability-desc">Consumes 40% of the current HP of all allies (except Netherwing). Castorice and Netherwing launch Joint ATK on the targets, dealing <span class="highlight-dmg">Quantum DMG</span> equal to <strong>15%/ 30%</strong> and <strong>25%/ 50%</strong> of Castorice's Max HP to all enemies. If the current HP is insufficient, reduces the current HP down to 1.</p>
+				</div>
+
+				<div id="technique" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="castorice/castech.png" width="65px">
+						<div>
+							<h3>Wail, Death's Herald</h3>
+							<span class="ability-type">Technique</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="castorice/castech.gif" width="80%">
+					</div>
+					<p class="ability-desc">After using Technique, enters the "Netherveil" state that lasts for 20 seconds. While "Netherveil" is active, enemies are unable to actively approach Castorice. During "Netherveil," active attacks will cause all enemies within range to enter combat. At the same time, summons the memosprite Netherwing, advances its action by 100%, and deploys the Territory "Lost Netherland." Netherwing has its current HP equal to 50% of max "Newbud." After entering battle, consumes 40% of the current HP of all allies (except Netherwing). If Netherwing is not summoned after entering battle, Castorice gains "Newbud" by an amount equal to 30% of max "Newbud".</p>
+				</div>
+
+				<div id="talent" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="castorice/castalent.png" width="65px">
+						<div>
+							<h3>Desolation Across Palms</h3>
+							<span class="ability-type">Talent</span>
+						</div>
+					</div>
+					<p class="ability-tag">[Enhance]</p>
+					<p class="ability-desc">The maximum limit of "Newbud" is related to the levels of all characters on the battlefield. For every 1 point of HP lost by all allies, Castorice gains 1 point of "Newbud." When "Newbud" reaches its maximum limit, can activate the Ultimate. When allies lose HP, Castorice's and Netherwing's DMG dealt increases by <strong>10%/ 20%</strong>. This effect can stack up to 3 time(s), lasting for 3 turn(s). When Netherwing is on the field, "Newbud" cannot be gained through Talent, and HP lost by all allies (except Netherwing) will be converted to an equal amount of HP for Netherwing.</p>
+				</div>
+
+				<div id="memosprite" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="castorice/poluxskill.png" width="65px">
+						<div>
+							<h3>Claw Splits the Veil</h3>
+							<span class="ability-type">Memosprite Skill</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="castorice/polluxskill.gif" width="80%">
+					</div>
+					<p class="ability-tag">[AoE]</p>
+					<p class="ability-stat"><strong>Toughness Reduction: 10</strong></p>
+					<p class="ability-desc">Deals <span class="highlight-dmg">Quantum DMG</span> equal to <strong>20%-40%</strong> of Castorice's Max HP to all enemies.</p>
+					
+					<div class="ability-sub-section">
+						<h3 class="sub-title">Breath Scorches the Shadow</h3>
+						<p class="ability-tag">[AoE]</p>
+						<p class="ability-stat"><strong>Toughness Reduction: 10</strong></p>
+						<p class="ability-desc">Launching "Breath Scorches the Shadow" will consume 25% of Netherwing's Max HP to deal <span class="highlight-dmg">Quantum DMG</span> equal to <strong>12%-24%</strong> of Castorice's Max HP to all enemies. In one attack, "Breath Scorches the Shadow" can be launched repeatedly, with the DMG multiplier increased progressively to <strong>14% / 17%-28% / 34%</strong>. After reaching <strong>17%-34%</strong>, it will not increase further. The DMG Multiplier Boost effect will not decrease before Netherwing disappears. When Netherwing's current HP is equal to or less than 25% of its Max HP, launching this ability will actively reduce HP down to 1, and then trigger the ability effect equal to that of the Talent "Wings Sweep the Ruins."</p>
+					</div>
+
+					<div class="ability-header sub-header">
+						<img src="castorice/polluxtalent.png" width="65px">
+						<div>
+							<h3>Mooncocoon Shrouds the Form</h3>
+							<span class="ability-type">Memosprite Talent</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="castorice/polluxtalent.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Support]</p>
+					<p class="ability-desc">When Netherwing is on the field, it acts as backup for allies. When allies take DMG or consume HP, their current HP can be reduced down to a minimum of 1, after which Netherwing will consume HP at 500% of the original value until Netherwing disappears.</p>
+
+					<div class="ability-sub-section">
+						<h3 class="sub-title">Wings Sweep the Ruins</h3>
+						<p class="ability-tag">[Bounce]</p>
+						<p class="ability-stat"><strong>Toughness Reduction: 5</strong></p>
+						<p class="ability-desc">Consumes all HP and deals 6 instance(s) of DMG, with each instance dealing <span class="highlight-dmg">Quantum DMG</span> equal to 20% of Castorice's Max HP to one random enemy. At the same time, restores HP by an amount equal to 3% of Castorice's Max HP plus 400 for all allies</p>
+					</div>
+
+					<div class="ability-sub-section">
+						<h3 class="sub-title">Roar Rumbles the Realm</h3>
+						<p class="ability-tag">[Support]</p>
+						<p class="ability-desc">When Netherwing is summoned, increases DMG dealt by all allies by 10%, lasting for 3 turn(s).</p>
+					</div>
+				</div>
+
+				<div id="ascension" class="tabcontent" style="display: none;">
+					<div class="abilityheaderasc">
+						<img src="castorice/casa2.png" width="80px">
+						<div>
+							<h3>ASCENSION 2</h3>
+							<span class="ascname">The Myopic's Doom</span>
+							<p class="ability-desc">While in "Supreme Stance," increases Aglaea's and Garmentmaker's ATK by an amount equal to 720% of Aglaea's SPD plus 360% of Garmentmaker's SPD.</p>
+						</div>
+					</div>
+					
+					<div class="abilityheaderasc">
+						<img src="castorice/casa4.png" width="80px">
+						<div>
+							<h3>ASCENSION 4</h3>
+							<span class="ascname">Last Thread of Fate</span>
+							<p class="ability-desc">When Garmentmaker disappears, up to 1 stack(s) of the SPD Boost from the Memosprite Talent can be retained. When Garmentmaker is summoned again, gains the corresponding number of SPD Boost stacks.</p>
+						</div>
+					</div>
+					
+					<div class="abilityheaderasc">
+						<img src="castorice/casa6.png" width="80px">
+						<div>
+							<h3>ASCENSION 6</h3>
+							<span class="ascname">The Speeding Sol</span>
+							<p class="ability-desc">At the start of battle, if this unit's Energy is lower than 50%, regenerates this unit's Energy to 50%.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+<script>
+function openAbility(evt, abilityName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(abilityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>

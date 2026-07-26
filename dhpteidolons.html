@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>dhpteidolons</title>
+<link href="../CSS/dhpt.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="eidolonpage">
+	<div id="menu">
+		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+	</div>
+	<div id="bg">
+		<img src="dhpt/bg.png" width="105%" height="10%">
+	</div>
+
+	<div id="box">
+		<div id="banner">
+			<img src="dhpt/dhptbanner.png" width="100%">
+		</div>
+
+	<div id="navigation">
+		<a href="dhptinfo.html#info">CHARACTER INFO</a>
+		<a href="dhptabilities.html#abilities">ABILITIES</a>
+		<a href="dhptbuild.html#build">BUILD</a>
+		<a href="dhpteidolons.html#eidolons">EIDOLONS</a>
+		<a href="dhptteam.html#team">TEAM COMPS</a>
+	</div>
+
+
+	<div id="eidolons">
+		<h2>EIDOLONS</h2>
+	</div>
+
+		<div class="eidolons-constellation">
+			<button class="eidolon-btn eido-1 lightbox-trigger" data-title="EIDOLON 1" data-subtitle="Shed Scales of Old" data-desc="When Dan Heng • Permansor Terrae uses Ultimate, recovers 1 Skill Point(s) and increases the ‘Bondmate's’ All-Type RES PEN by 18%, lasting for 3 turn(s).">
+			<img src="dhpt/dhe1.png" alt="Eidolon I" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 1</span>
+				<span class="eido-sub">Shed Scales of Old</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-2 lightbox-trigger" data-title="EIDOLON 2" data-subtitle="Watch Trails to Blaze" data-desc="Additionally increases the number of actions for the enhanced Souldragon from Ultimate by 2. After Dan Heng • Permansor Terrae uses Ultimate, Souldragon advances action by 100%. When the enhanced ‘Souldragon’ takes action, the Additional DMG dealt by the ‘Bondmate’ becomes 200% of its original DMG, and the Shield Effect provided in this instance becomes 200% of its original Shield Effect.">
+			<img src="dhpt/dhe2.png" alt="Eidolon II" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 2</span>
+				<span class="eido-sub">Watch Trails to Blaze</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-3 lightbox-trigger" data-title="EIDOLON 3" data-subtitle="Bear Weight of Worlds" data-desc="Ultimate Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10.">
+			<img src="dhpt/dhe3.png" alt="Eidolon III" width="550px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 3</span>
+				<span class="eido-sub">Bear Weight of Worlds</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-4 lightbox-trigger" data-title="EIDOLON 4" data-subtitle="By Oath, This Vessel Is I" data-desc="Reduces the DMG taken by the ‘Bondmate’ by 20%.">
+			<img src="dhpt/dhe4.png" alt="Eidolon IV" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 4</span>
+				<span class="eido-sub">By Oath, This Vessel Is I</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-5 lightbox-trigger" data-title="EIDOLON 5" data-subtitle="The Path of Permanence Sweeps Far" data-desc="Skill Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15.">
+			<img src="dhpt/dhe5.png" alt="Eidolon V" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 5</span>
+				<span class="eido-sub">The Path of Permanence Sweeps Far</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-6 lightbox-trigger" data-title="EIDOLON 6" data-subtitle="One Dream to Enfold All Wilds" data-desc="When the ‘Bondmate’ is on the field, increases the DMG taken by all enemies by 20%. When the ‘Bondmate’ deals DMG, ignores 12% of the enemy targets' DEF. When Dan Heng • Permansor Terrae uses Ultimate, the ‘Bondmate’ will deal Additional DMG of the Bondmate's Type to all enemies, equal to 330% of the Bondmate's ATK.">
+			<img src="dhpt/dhe6.png" alt="Eidolon VI" width="550px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 6</span>
+				<span class="eido-sub">One Dream to Enfold All Wilds</span>
+			</span>
+		</button>
+		</div>
+	</div>
+
+	<div id="custom-lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+		<div class="lightbox-container" onclick="event.stopPropagation()">
+			<div class="lightbox-card">
+				<img id="lightbox-img" class="floating-img" src="" alt="Eidolon Art">
+				
+				<div class="lightbox-info1">
+					<h3 id="lightbox-title"></h3>
+					<h4 id="lightbox-subtitle"></h4>
+					<p id="lightbox-desc"></p>
+				</div>
+			</div>
+		
+			<div id="lightbox-outside-text">CLICK ANYWHERE TO CLOSE</div>
+		</div>
+	</div>
+
+	
+	<script>
+		const lightbox = document.getElementById('custom-lightbox');
+		const lightboxImg = document.getElementById('lightbox-img');
+		const lightboxTitle = document.getElementById('lightbox-title');
+		const lightboxSubtitle = document.getElementById('lightbox-subtitle');
+		const lightboxDesc = document.getElementById('lightbox-desc');
+
+		document.querySelectorAll('.lightbox-trigger').forEach(button => {
+			button.addEventListener('click', function() {
+				const img = this.querySelector('img');
+				lightboxImg.src = img.src;
+				lightboxTitle.innerText = this.getAttribute('data-title');
+				lightboxSubtitle.innerText = this.getAttribute('data-subtitle').toUpperCase();
+				lightboxDesc.innerHTML = this.getAttribute('data-desc');
+				
+				lightbox.style.display = 'flex';
+				setTimeout(() => {
+					lightbox.classList.add('active');
+				}, 10);
+			});
+		});
+
+		function closeLightbox() {
+			lightbox.classList.remove('active');
+			setTimeout(() => {
+				lightbox.style.display = 'none';
+			}, 400);
+		}
+	</script>
+		
+	<div id="box2">
+ㅤ	</div>
+</body>
+</html>

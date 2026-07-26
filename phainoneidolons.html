@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>phainoneidolons</title>
+<link href="../CSS/phainon.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="eidolonpage">
+	<div id="menu">
+		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+	</div>
+	<div id="bg">
+		<img src="phainon/bg.png" width="105%" height="10%">
+	</div>
+
+	<div id="box">
+		<div id="banner">
+			<img src="phainon/phainonbanner.png" width="100%">
+		</div>
+
+	<div id="navigation">
+		<a href="phainoninfo.html#info">CHARACTER INFO</a>
+		<a href="phainonabilities.html#abilities">ABILITIES</a>
+		<a href="phainonbuild.html#build">BUILD</a>
+		<a href="phainoneidolons.html#eidolons">EIDOLONS</a>
+		<a href="phainonteam.html#team">TEAM COMPS</a>
+	</div>
+
+
+	<div id="eidolons">
+		<h2>EIDOLONS</h2>
+	</div>
+
+		<div class="eidolons-constellation">
+			<button class="eidolon-btn eido-1 lightbox-trigger" data-title="EIDOLON 1" data-subtitle="Fire and Light Bind Virtue and Vice" data-desc="For every enemy target defeated within 1 Transformation, the inheritance ratio of Khaslana's extra turn's SPD further increases by 1.5%, up to 84%. When using Ultimate, CRIT DMG increases by 50%, lasting for 3 turn(s).">
+			<img src="phainon/phainone1.png" alt="Eidolon I" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 1</span>
+				<span class="eido-sub">Fire and Light Bind Virtue and Vice</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-2 lightbox-trigger" data-title="EIDOLON 2" data-subtitle="Sky and Earth Churn Mortal Froth" data-desc="Khaslana's Physical RES PEN increases by 20%. When consuming 4 ‘Scourge’ to use 'Foundation: Stardeath Verdict', gains 1 extra turn.">
+			<img src="phainon/phainone2.png" alt="Eidolon II" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 2</span>
+				<span class="eido-sub">Sky and Earth Churn Mortal Froth</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-3 lightbox-trigger" data-title="EIDOLON 3" data-subtitle="Depths of Quiet, Entombed in Ruin" data-desc="Ultimate Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10.">
+			<img src="phainon/phainone3.png" alt="Eidolon III" width="550px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 3</span>
+				<span class="eido-sub">Depths of Quiet, Entombed in Ruin</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-4 lightbox-trigger" data-title="EIDOLON 4" data-subtitle="Faces of Titans, Blurred by Time" data-desc="When using ‘Calamity: Soulscorch Edict’, additionally gains 4 stack(s) of ‘Soulscorch’.">
+			<img src="phainon/phainone4.png" alt="Eidolon IV" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 4</span>
+				<span class="eido-sub">Faces of Titans, Blurred by Time</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-5 lightbox-trigger" data-title="EIDOLON 5" data-subtitle="The Wheel Spins Forevermore" data-desc="Skill Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15.">
+			<img src="phainon/phainone5.png" alt="Eidolon V" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 5</span>
+				<span class="eido-sub">The Wheel Spins Forevermore</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-6 lightbox-trigger" data-title="EIDOLON 6" data-subtitle="Embers of Old Rise Still" data-desc="The number of Overflow point for ‘Coreflame’ no longer has an upper limit. When battle starts, gains 6 ‘Coreflame(s)’. After using ‘Foundation: Stardeath Verdict's’ attack, additionally deals True DMG equal to 36% of the total DMG dealt in this attack to the enemy with the highest HP.">
+			<img src="phainon/phainone6.png" alt="Eidolon VI" width="550px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 6</span>
+				<span class="eido-sub">Embers of Old Rise Still</span>
+			</span>
+		</button>
+		</div>
+	</div>
+
+	<div id="custom-lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+		<div class="lightbox-container" onclick="event.stopPropagation()">
+			<div class="lightbox-card">
+				<img id="lightbox-img" class="floating-img" src="" alt="Eidolon Art">
+				
+				<div class="lightbox-info1">
+					<h3 id="lightbox-title"></h3>
+					<h4 id="lightbox-subtitle"></h4>
+					<p id="lightbox-desc"></p>
+				</div>
+			</div>
+		
+			<div id="lightbox-outside-text">CLICK ANYWHERE TO CLOSE</div>
+		</div>
+	</div>
+
+	
+	<script>
+		const lightbox = document.getElementById('custom-lightbox');
+		const lightboxImg = document.getElementById('lightbox-img');
+		const lightboxTitle = document.getElementById('lightbox-title');
+		const lightboxSubtitle = document.getElementById('lightbox-subtitle');
+		const lightboxDesc = document.getElementById('lightbox-desc');
+
+		document.querySelectorAll('.lightbox-trigger').forEach(button => {
+			button.addEventListener('click', function() {
+				const img = this.querySelector('img');
+				lightboxImg.src = img.src;
+				lightboxTitle.innerText = this.getAttribute('data-title');
+				lightboxSubtitle.innerText = this.getAttribute('data-subtitle').toUpperCase();
+				lightboxDesc.innerHTML = this.getAttribute('data-desc');
+				
+				lightbox.style.display = 'flex';
+				setTimeout(() => {
+					lightbox.classList.add('active');
+				}, 10);
+			});
+		});
+
+		function closeLightbox() {
+			lightbox.classList.remove('active');
+			setTimeout(() => {
+				lightbox.style.display = 'none';
+			}, 400);
+		}
+	</script>
+</body>
+</html>

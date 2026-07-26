@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>evernightabilities</title>
+<link href="../CSS/evernight.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="menu">
+		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+	</div>
+	<div id="bg">
+		<img src="evernight/bg.png" width="105%" height="10%">
+	</div>
+	
+	<div id="box">
+		<div id="banner">
+			<img src="evernight/evernightbanner.png" width="100%">
+		</div>
+		
+		<div id="navigation">
+			<a href="evernightinfo.html#info">CHARACTER INFO</a>
+			<a href="evernightabilities.html#abilities">ABILITIES</a>
+			<a href="evernightbuild.html#build">BUILD</a>
+			<a href="evernighteidolons.html#eidolons">EIDOLONS</a>
+			<a href="evernightteam.html#team">TEAM COMPS</a>
+		</div>
+		
+		<div id="abilities">
+			<h2>ABILITIES</h2>
+		</div>
+
+		<div class="abilities-container">
+			
+			<div class="sidebar-tabs">
+				<button class="tablinks active" onclick="openAbility(event, 'basic-attack')">Basic Attack</button>
+				<button class="tablinks" onclick="openAbility(event, 'skill')">Skill</button>
+				<button class="tablinks" onclick="openAbility(event, 'ultimate')">Ultimate</button>
+				<button class="tablinks" onclick="openAbility(event, 'technique')">Technique</button>
+				<button class="tablinks" onclick="openAbility(event, 'talent')">Talent</button>
+				<button class="tablinks" onclick="openAbility(event, 'memosprite')">Memosprite</button>
+				<button class="tablinks" onclick="openAbility(event, 'ascension')">Ascension Bonus</button>
+			</div>
+
+			<div class="content-panel">
+				
+				<div id="basic-attack" class="tabcontent" style="display: block;">
+					<div class="ability-header">
+						<img src="evernight/evernightba.png" width="65px">
+						<div>
+							<h3>Time Thence Blurs</h3>
+							<span class="ability-type">Basic Attack</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="evernight/evernightba.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Single Target]</p>
+					<p class="ability-stat"><strong>Toughness Break: 10</strong></p>
+					<p class="ability-desc">Deals <span class="highlight-dmg">Ice DMG</span> equal to <strong> 25%/50% </strong> of Evernight's Max HP to designated enemy target.</p>
+				</div>
+
+				<div id="skill" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="evernight/evernightskill.png" width="65px">
+						<div>
+							<h3>Day Gently Slips</h3>
+							<span class="ability-type">Skill</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="evernight/evernightskill.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Summon]</p>
+					<p class="ability-desc">Consumes HP equal to 10% of Evernight's Max HP to summon memosprite Evey and increase CRIT DMG of all ally memosprites by <strong>12%/24%</strong> for 2 turn(s). Duration decreases by 1 at the start of each of Evernight's turns. If Evey is already on the field, restores 50% of its Max HP. When used, gains 2 "Memoria." If in the "Darkest Riddle" state, additionally gains 12 "Memoria."If the current HP is insufficient, Evernight's current HP will be reduced to 1 when using her Skill.</p>
+				</div>
+
+				<div id="ultimate" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="evernight/evernightult.png" width="65px">
+						<div>
+							<h3>O Wakeful World, Goodnight</h3>
+							<span class="ability-type">Ultimate</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="evernight/evernightult.gif" width="80%">
+					</div>
+					<p class="ability-tag">[AoE]</p>
+					<p class="ability-stat"><strong>Toughness Reduction: 30</strong></p>
+					<p class="ability-desc">Summons memosprite Evey, then memosprite Evey deals <span class="highlight-dmg">Ice DMG</span> equal to <strong>100%/200%</strong> of Evey's Max HP to all enemies, and causes Evernight to enter the "Darkest Riddle" state. During this state, the DMG received by all enemies increases by <strong>15%/30%</strong>, the DMG dealt by Evernight and memosprite Evey increases by <strong>30%/60%</strong>, and both Evernight and memosprite Evey are immune to Crowd Control debuffs. Gains 2 "Darkest Riddle" Charge(s). Memosprite Evey consumes 1 Charge after using "Dream, Dissolving, as Dew." At the start of Evernight's turn, if no Charges remain, exits the "Darkest Riddle" state.</p>
+				</div>
+
+				<div id="technique" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="evernight/evernighttech.png" width="65px">
+						<div>
+							<h3>Let it Rain Cold On Thee</h3>
+							<span class="ability-type">Technique</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="evernight/evernighttech.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Support]</p>
+					<p class="ability-desc">After using Technique, at the start of the next battle, gains an effect identical to the Skill which increases all allies' memosprite CRIT DMG, and gains 1 point(s) of "Memoria."</p>
+				</div>
+
+				<div id="talent" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="evernight/evernighttalent.png" width="65px">
+						<div>
+							<h3>With Me, This Night</h3>
+							<span class="ability-type">Talent</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="evernight/evernighttalent.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Enhance]</p>
+					<p class="ability-desc">When entering combat, summons memosprite Evey. Memosprite Evey has 160 SPD by default, and its Max HP is 50% of Evernight's Max HP. Each time Evernight or memosprite Evey loses HP, increases CRIT DMG for both this unit and memosprite Evey by 30%/60% for 2 turn(s), and gains 2 "Memoria." This effect can trigger only once per target per attack. When Evernight has 16 or more "Memoria," dispels and becomes immune to Crowd Control debuffs. If memosprite Evey is on the field, it immediately takes action. The immediate action effect can only trigger again after memosprite Evey uses "Dream, Dissolving, as Dew."</p>
+				</div>
+
+				<div id="memosprite" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="evernight/eveyskill.png" width="65px">
+						<div>
+							<h3>Remembrance, Whirling, Like Rain</h3>
+							<span class="ability-type">Memosprite Skill</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="evernight/eveyskill1.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Single Target]</p>
+					<p class="ability-stat"><strong>Toughness Reduction: 10</strong></p>
+					<p class="ability-desc">This ability automatically selects a target, prioritizing the enemy target that Evernight last attacked. Deals <span class="highlight-dmg">Ice DMG</span> equal to <strong>25%/50%</strong> of Evey's Max HP to one enemy. For every 4 point(s) of "Memoria" Evernight currently has, further deals <span class="highlight-dmg">Ice DMG</span> equal to <strong>5%/10%</strong> of Evey's Max HP. After use, Evernight gains 1 point(s) of "Memoria."</p>
+						
+					<div class="ability-sub-section">
+						<h3 class="sub-title">Dream, Dissolving, as Dew</h3>
+						<div class="ability-image">
+						<img src="evernight/eveyskill2.gif" width="80%">
+						</div>
+						<p class="ability-tag">[AoE]</p>
+						<p class="ability-stat"><strong>Toughness Reduction: 30</strong></p>
+						<p class="ability-desc">When Evernight's "Memoria" is greater than or equal to 16 points, and Evernight is not under a Crowd Control state, this ability can be used. For each point of "Memoria" currently in possession, deals <span class="highlight-dmg">Ice DMG</span> equal to <strong>6%/12%</strong> of Evey's Max HP to the primary target, and <span class="highlight-dmg">Ice DMG</span> equal to <strong>3%/6%</strong> of Evey's Max HP to other enemy targets. After use, consumes all HP and "Memoria," and Evey disappears. the Ruins."</p>
+					</div>
+
+					<div class="ability-header sub-header">
+						<img src="evernight/eveytalent.png" width="65px">
+						<div>
+							<h3>Solitude, Drifting, In Murk</h3>
+							<span class="ability-type">Memosprite Talent</span>
+						</div>
+					</div>
+					<p class="ability-tag">[Support]</p>
+					<p class="ability-desc">Evey is immune to Crowd Control debuffs but has increased chance of being targeted. While Evernight is on the field, increases DMG dealt by Evernight and Evey by <strong>25%/50%</strong>.</p>
+
+					<div class="ability-sub-section">
+						<h3 class="sub-title">Night, Trailing, In Step</h3>
+						<p class="ability-tag">[Enhance]</p>
+						<p class="ability-desc">When summoned, this unit immediately takes action.</p>
+					</div>
+
+					<div class="ability-sub-section">
+						<h3 class="sub-title">You, Parting, Beyond Reach</h3>
+						<p class="ability-tag">[Enhance]</p>
+						<p class="ability-desc">Upon disappearing, increases Evernight's SPD by 10%. If the disappearance is due to using "Dream, Dissolving, as Dew," for each point of "Memoria" used in this attack, additionally increases Evernight's SPD by 1%. The SPD Boost effect cannot stack, and is removed at the start of Evernight's next turn.</p>
+					</div>
+				</div>
+
+				<div id="ascension" class="tabcontent" style="display: none;">
+					<div class="abilityheaderasc">
+						<img src="evernight/evernighta2.png" width="80px">
+						<div>
+							<h3>ASCENSION 2</h3>
+							<span class="ascname">Dark the Night, Still the Moon</span>
+							<p class="ability-desc">Increases Evernight and the memosprite Evey's CRIT Rate by 35%. When using abilities, consumes 5% of this unit's current HP to increase both their CRIT DMG by 15% for 2 turn(s). After memosprite Evey uses "Dream, Dissolving, as Dew," recovers 1 Skill Point for allies.</p>
+						</div>
+					</div>
+					
+					<div class="abilityheaderasc">
+						<img src="evernight/evernighta4.png" width="80px">
+						<div>
+							<h3>ASCENSION 4</h3>
+							<span class="ascname">Rouse the Flame, Lull the Light</span>
+							<p class="ability-desc">At the start of combat, Evernight regenerates 70 Energy and gains 1 "Memoria." When Evernight or an ally memosprite uses an ability, Evernight regenerates 5 Energy and gains 1 "Memoria."</p>
+						</div>
+					</div>
+					
+					<div class="abilityheaderasc">
+						<img src="evernight/evernighta6.png" width="80px">
+						<div>
+							<h3>ASCENSION 6</h3>
+							<span class="ascname">Kindle the Morn, Drop the Rain</span>
+							<p class="ability-desc">When there are 1/2/3/4 or more Remembrance characters in the team, while Evernight's Skill persists, additionally increases all memosprites' CRIT DMG by 5%/15%/50%/65%.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+			
+		<div id="box2">
+		</div>	
+		
+	</div>
+
+<script>
+function openAbility(evt, abilityName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(abilityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>cyreneeidolons</title>
+<link href="../CSS/cyrene.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="eidolonpage">
+	<div id="menu">
+		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+	</div>
+	<div id="bg">
+		<img src="cyrene/bg.png" width="105%" height="10%">
+	</div>
+
+	<div id="box">
+		<div id="banner">
+			<img src="cyrene/cyrenebanner.png" width="100%">
+		</div>
+
+	<div id="navigation">
+		<a href="cyreneinfo.html#info">CHARACTER INFO</a>
+		<a href="cyreneabilities.html#abilities">ABILITIES</a>
+		<a href="cyrenebuild.html#build">BUILD</a>
+		<a href="cyreneeidolons.html#eidolons">EIDOLONS</a>
+		<a href="cyreneteam.html#team">TEAM COMPS</a>
+	</div>
+
+
+	<div id="eidolons">
+		<h2>EIDOLONS</h2>
+	</div>
+
+		<div class="eidolons-constellation">
+			<button class="eidolon-btn eido-1 lightbox-trigger" data-title="EIDOLON 1" data-subtitle="Epics, Born on a Blank Slate" data-desc="When Demiurge triggers the Memosprite Skill ‘Ode to Ego’ during the use of ‘Minuet of Blooms and Plumes’, gains 6 ‘Recollection’ point(s) and increases the number of bounces for this attack by 12.">
+			<img src="cyrene/cyrenee1.png" alt="Eidolon I" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 1</span>
+				<span class="eido-sub">Epics, Born on a Blank Slate</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-2 lightbox-trigger" data-title="EIDOLON 2" data-subtitle="A Tomorrow in Thirteen Shades" data-desc="When entering combat, additionally gains 12 ‘Recollection’ point(s). For every 1 different ally character that gains the Memosprite Skill buff from Demiurge, the DMG multiplier for the True DMG dealt by ally targets via the Skill's Zone increases by 6%, up to a max increase of 24%.">
+			<img src="cyrene/cyrenee2.png" alt="Eidolon II" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 2</span>
+				<span class="eido-sub">A Tomorrow in Thirteen Shades</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-3 lightbox-trigger" data-title="EIDOLON 3" data-subtitle="By Thy Being, As I've Written" data-desc="Ultimate Lv. +2, up to a maximum of Lv. 15.
+Talent Lv. +2, up to a maximum of Lv. 15.
+Memosprite Skill Lv. +1, up to a maximum of Lv. 10.">
+			<img src="cyrene/cyrenee3.png" alt="Eidolon III" width="550px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 3</span>
+				<span class="eido-sub">By Thy Being, As I've Written</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-4 lightbox-trigger" data-title="EIDOLON 4" data-subtitle="Please Write On, With a Smile" data-desc="After every 1 use of ‘Minuet of Blooms and Plumes’ by Demiurge, the Bounce DMG multiplier for the triggered Memosprite Skill ‘Ode to Ego’ increases by 6% in the current battle, stacking up to 24 times.">
+			<img src="cyrene/cyrenee4.png" alt="Eidolon IV" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 4</span>
+				<span class="eido-sub">Please Write On, With a Smile</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-5 lightbox-trigger" data-title="EIDOLON 5" data-subtitle="Gaze, Steeped in Yesterbloom" data-desc="Skill Lv. +2, up to a maximum of Lv. 15.
+Basic ATK Lv. +1, up to a maximum of Lv. 10.
+Memosprite Talent Lv. +1, up to a maximum of Lv. 10.">
+			<img src="cyrene/cyrenee5.png" alt="Eidolon V" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 5</span>
+				<span class="eido-sub">Gaze, Steeped in Yesterbloom</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-6 lightbox-trigger" data-title="EIDOLON 6" data-subtitle="Remembrance, Sung in Ripples ♪" data-desc="When Cyrene uses Ultimate for the first time, all allies advance action by 100%. Each time Demiurge triggers the Memosprite Skill ‘Ode to Ego’ during the use of ‘Minuet of Blooms and Plumes’, gains the following effects based on the number of times it has been triggered in the current battle:
+1 time: When Demiurge is on the field, reduces all enemy targets' DEF by 20%.
+2 times and more: All allies advance action by 24%.">
+			<img src="cyrene/cyrenee6.png" alt="Eidolon VI" width="550px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 6</span>
+				<span class="eido-sub">Remembrance, Sung in Ripples ♪</span>
+			</span>
+		</button>
+		</div>
+	</div>
+
+	<div id="custom-lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+		<div class="lightbox-container" onclick="event.stopPropagation()">
+			<div class="lightbox-card">
+				<img id="lightbox-img" class="floating-img" src="" alt="Eidolon Art">
+				
+				<div class="lightbox-info1">
+					<h3 id="lightbox-title"></h3>
+					<h4 id="lightbox-subtitle"></h4>
+					<p id="lightbox-desc"></p>
+				</div>
+			</div>
+		
+			<div id="lightbox-outside-text">CLICK ANYWHERE TO CLOSE</div>
+		</div>
+	</div>
+
+	
+	<script>
+		const lightbox = document.getElementById('custom-lightbox');
+		const lightboxImg = document.getElementById('lightbox-img');
+		const lightboxTitle = document.getElementById('lightbox-title');
+		const lightboxSubtitle = document.getElementById('lightbox-subtitle');
+		const lightboxDesc = document.getElementById('lightbox-desc');
+
+		document.querySelectorAll('.lightbox-trigger').forEach(button => {
+			button.addEventListener('click', function() {
+				const img = this.querySelector('img');
+				lightboxImg.src = img.src;
+				lightboxTitle.innerText = this.getAttribute('data-title');
+				lightboxSubtitle.innerText = this.getAttribute('data-subtitle').toUpperCase();
+				lightboxDesc.innerHTML = this.getAttribute('data-desc');
+				
+				lightbox.style.display = 'flex';
+				setTimeout(() => {
+					lightbox.classList.add('active');
+				}, 10);
+			});
+		});
+
+		function closeLightbox() {
+			lightbox.classList.remove('active');
+			setTimeout(() => {
+				lightbox.style.display = 'none';
+			}, 400);
+		}
+	</script>
+</body>
+</html>

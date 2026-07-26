@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>phainonabilities</title>
+<link href="../CSS/phainon.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="menu">
+		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+	</div>
+	<div id="bg">
+		<img src="phainon/bg.png" width="105%" height="10%">
+	</div>
+	
+	<div id="box">
+		<div id="banner">
+			<img src="phainon/phainonbanner.png" width="100%">
+		</div>
+		
+		<div id="navigation">
+			<a href="phainoninfo.html#info">CHARACTER INFO</a>
+			<a href="phainonabilities.html#abilities">ABILITIES</a>
+			<a href="phainonbuild.html#build">BUILD</a>
+			<a href="phainoneidolons.html#eidolons">EIDOLONS</a>
+			<a href="phainonteam.html#team">TEAM COMPS</a>
+		</div>
+		
+		<div id="abilities">
+			<h2>ABILITIES</h2>
+		</div>
+
+		<div class="abilities-container">
+			
+			<div class="sidebar-tabs">
+				<button class="tablinks active" onclick="openAbility(event, 'basic-attack')">Basic Attack</button>
+				<button class="tablinks" onclick="openAbility(event, 'skill')">Skill</button>
+				<button class="tablinks" onclick="openAbility(event, 'ultimate')">Ultimate</button>
+				<button class="tablinks" onclick="openAbility(event, 'technique')">Technique</button>
+				<button class="tablinks" onclick="openAbility(event, 'talent')">Talent</button>
+				<button class="tablinks" onclick="openAbility(event, 'ascension')">Ascension Bonus</button>
+			</div>
+
+			<div class="content-panel">
+				
+				<div id="basic-attack" class="tabcontent" style="display: block;">
+					<div class="ability-header">
+						<img src="phainon/phainonba.png" width="65px">
+						<div>
+							<h3>Stride to Deliverance</h3>
+							<span class="ability-type">Basic Attack</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="phainon/phainonba.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Single Target]</p>
+					<p class="ability-stat"><strong>Toughness Break: 10</strong></p>
+					<p class="ability-desc">Deals <span class="highlight-dmg"> Physical DMG</span> equal to <strong> 50%/100%</strong> of Phainon's ATK to one designated enemy.</p>
+				</div>
+
+				<div id="skill" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="phainon/phainonskill.png" width="65px">
+						<div>
+							<h3>Let There Be Light</h3>
+							<span class="ability-type">Skill</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="phainon/phainonskill.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Blast]</p>
+					<p class="ability-stat"><strong>Toughness Break: 20</strong></p>
+					<p class="ability-desc">Gains 2 point(s) of "Coreflame," dealing  <span class="highlight-dmg">Physical DMG</span> equal to <strong>150.0%/300%</strong> of Phainon's ATK to one designated enemy and <span class="highlight-dmg">Physical DMG</span> equal to <strong>60%/120%</strong> of Phainon's ATK to adjacent targets.</p>
+				</div>
+
+				<div id="ultimate" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="phainon/phainonult.png" width="65px">
+						<div>
+							<h3>He Who Bears the World Must Burn</h3>
+							<span class="ability-type">Ultimate</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="phainon/phainonult.gif" width="80%">
+					</div>
+					<p class="ability-tag">[AoE]</p>
+					<p class="ability-stat"><strong>Toughness Reduction: 20</strong></p>
+					<p class="ability-desc">Transforms into Khaslana and deploys Territory during transformation. Other teammates in the Territory becomes Departed and cannot take action, and all enemies gain Physical Weakness. Khaslana does not have his own turn, but has 8 Khaslana extra turn(s) with a fixed SPD equal to 60.0% of Khaslana's base SPD. At the start of the final Khaslana's extra turn, immediately launches Final Hit and deals <span class="highlight-dmg">Physical Ultimate DMG</span> equal to <strong>480%/960%</strong> of Khaslana's ATK that is distributed evenly across all enemies.</p>
+				</div>
+
+				<div id="technique" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="phainon/phainontech.png" width="65px">
+						<div>
+							<h3>Beginning of the End</h3>
+							<span class="ability-type">Technique</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="phainon/phainontech.gif" width="80%">
+					</div>
+					<p class="ability-desc">While Phainon is in the team, increases Max Technique Points by 3. When actively using this Technique, consumes 2 Technique Points and immediately attacks all enemies within a certain range. After entering battle, regenerates 25 Energy for allies and gains 2 "Scourge" and 1 Skill Point(s). Deals Physical DMG equal to 200% of Phainon's ATK to all enemies at the start of each wave. If attacking a normal enemy, immediately defeats them without entering combat. No Technique Points are consumed if no enemies are hit.</p>
+				</div>
+
+				<div id="talent" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="phainon/phainontalent.png" width="65px">
+						<div>
+							<h3>Pyric Corpus</h3>
+							<span class="ability-type">Talent</span>
+						</div>
+					</div>
+					<p class="ability-tag">[Enhance]</p>
+					<p class="ability-desc">Phainon's Talent. When "Coreflame" reaches 12 point(s), Ultimate can be activated. After reaching the max limit, up to 3 excess point(s) can be accumulated. At the end of the Transformation, gains "Coreflames" based on the excess points. When Phainon is the target of any target's ability, he gains 1 point of "Coreflame." If the ability's user is Phainon's teammate, additionally increases Phainon's CRIT DMG by <strong>15%/30%</strong> for 3 turn(s).</p>
+				</div>
+
+				<div id="ascension" class="tabcontent" style="display:none;">
+					<div class="abilityheaderasc">
+						<img src="phainon/phainona2.png" width="80px">
+						<div>
+							<h3>ASCENSION 2</h3>
+							<span class="ascname">March to Oblivion</span>
+							<p class="ability-desc">When the transformation ends, gains 3 point(s) of "Coreflame</p>
+						</div>
+					</div>
+					
+					<div class="abilityheaderasc">
+						<img src="phainon/phainona4.png" width="80px">
+						<div>
+							<h3>ASCENSION 4</h3>
+							<span class="ascname">Bide in Flames</span>
+							<p class="ability-desc">When receiving healing effects or Shields from a teammate, increases DMG dealt by 40% for 4 turn(s). This effect cannot be triggered repeatedly within one turn. When receiving Energy regeneration ability effects provided by teammates, gains 1 point(s) of "Coreflame."</p>
+						</div>
+					</div>
+					
+					<div class="abilityheaderasc">
+						<img src="phainon/phainona6.png" width="80px">
+						<div>
+							<h3>ASCENSION 6</h3>
+							<span class="ascname">Sublimity</span>
+							<p class="ability-desc">When entering battle or when transformation ends, increases ATK by 50%. This effect can stack up to 2 time(s).</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+<script>
+function openAbility(evt, abilityName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(abilityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>tribbieabilities</title>
+<link href="../CSS/tribbie.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="menu">
+		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+	</div>
+	<div id="bg">
+		<img src="tribbie/bg.png" width="105%" height="10%">
+	</div>
+	
+	<div id="box">
+		<div id="banner">
+			<img src="tribbie/tribbiebanner.png" width="100%">
+		</div>
+		
+		<div id="navigation">
+			<a href="tribbieinfo.html#info">CHARACTER INFO</a>
+			<a href="tribbieabilities.html#abilities">ABILITIES</a>
+			<a href="tribbiebuild.html#build">BUILD</a>
+			<a href="tribbieeidolons.html#eidolons">EIDOLONS</a>
+			<a href="tribbieteam.html#team">TEAM COMPS</a>
+		</div>
+		
+		<div id="abilities">
+			<h2>ABILITIES</h2>
+		</div>
+
+		<div class="abilities-container">
+			
+			<div class="sidebar-tabs">
+				<button class="tablinks active" onclick="openAbility(event, 'basic-attack')">Basic Attack</button>
+				<button class="tablinks" onclick="openAbility(event, 'skill')">Skill</button>
+				<button class="tablinks" onclick="openAbility(event, 'ultimate')">Ultimate</button>
+				<button class="tablinks" onclick="openAbility(event, 'technique')">Technique</button>
+				<button class="tablinks" onclick="openAbility(event, 'talent')">Talent</button>
+				<button class="tablinks" onclick="openAbility(event, 'ascension')">Ascension Bonus</button>
+			</div>
+
+			<div class="content-panel">
+				
+				<div id="basic-attack" class="tabcontent" style="display: block;">
+					<div class="ability-header">
+						<img src="tribbie/tribbieba.png" width="65px">
+						<div>
+							<h3>Hundred Rockets</h3>
+							<span class="ability-type">Basic Attack</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="tribbie/tribbieba.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Single Target]</p>
+					<p class="ability-stat"><strong>Toughness Break: 10</strong></p>
+					<p class="ability-desc">Deals <span class="highlight-dmg">Quantum DMG</span> equal to <strong>15%/30%</strong> of Tribbie's Max HP to one designated enemy. Deals <span class="highlight-dmg">Quantum DMG</span> equal to <strong>7.5%/15%</strong> of Tribbie's Max HP to adjacent targets.</p>
+				</div>
+
+				<div id="skill" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="tribbie/tribbieskill.png" width="65px">
+						<div>
+							<h3>Where'd the Gifts Go</h3>
+							<span class="ability-type">Skill</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="tribbie/tribbieskill.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Support]</p>
+					<p class="ability-desc">Gains "Numinosity," lasting for 3 turn(s). This duration decreases by 1 at the start of this unit's every turn. While Tribbie has "Numinosity," increases all ally targets' All-Type RES PEN by <strong>12%/24%</strong>.</p>
+				</div>
+
+				<div id="ultimate" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="tribbie/tribbieult.png" width="65px">
+						<div>
+							<h3>Guess Who Lives Here</h3>
+							<span class="ability-type">Ultimate</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="tribbie/tribbieult.gif" width="80%">
+					</div>
+					<p class="ability-tag">[AoE]</p>
+					<p class="ability-stat"><strong>Toughness Reduction: 20</strong></p>
+					<p class="ability-desc">Activates a Zone and deals <span class="highlight-dmg">Quantum DMG</span> equal to <strong>15% /30%</strong> of Tribbie's Max HP to all enemies. While the Zone lasts, increases enemy targets' DMG taken by <strong>15%/30%</strong>. After an ally target attacks, for every 1 target hit, deals 1 instance of <span class="highlight-dmg">Quantum Additional DMG</span> equal to <strong>6%/12%</strong> of Tribbie's Max HP to the target that has the highest HP among the hit targets. The Zone lasts for 2 turn(s). This duration decreases by 1 at the start of this unit's every turn.</p>
+				</div>
+
+				<div id="technique" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="tribbie/tribbietech.png" width="65px">
+						<div>
+							<h3>Beginning of the End</h3>
+							<span class="ability-type">Technique</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="tribbie/tribbietech.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Enhance]</p>
+					<p class="ability-desc">After using Technique and upon entering battle, obtains "Numinosity," lasting for 3 turn(s).</p>
+				</div>
+
+				<div id="talent" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="tribbie/tribbietalent.png" width="65px">
+						<div>
+							<h3>Busy as Tribbie</h3>
+							<span class="ability-type">Talent</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="tribbie/tribbietalent.gif" width="80%">
+					</div>
+					<p class="ability-tag">[AoE]</p>
+					<p class="ability-stat"><strong>Toughness Reduction: 5</strong></p>
+					<p class="ability-desc">After other ally characters use Ultimate, Tribbie launches Follow-up ATK, dealing <span class="highlight-dmg">Quantum DMG</span> equal to <strong>9%/18%</strong> of Tribbie's Max HP to all enemies. This effect triggers up to 1 time per character. When Tribbie uses Ultimate, resets the trigger count for other ally characters. If the target was defeated before the Follow-up ATK is launched, then launches the Follow-up ATK against new enemy targets entering the battlefield.</p>
+				</div>
+
+				<div id="ascension" class="tabcontent" style="display:none;">
+					<div class="abilityheaderasc">
+						<img src="tribbie/tribbiea2.png" width="80px">
+						<div>
+							<h3>ASCENSION 2</h3>
+							<span class="ascname">Lamb Outside the Wall...</span>
+							<p class="ability-desc">After using Talent's Follow-up ATK, increases the DMG dealt by Tribbie by 72%. This effect can stack up to 3 time(s), lasting for 3 turn(s).</p>
+						</div>
+					</div>
+					
+					<div class="abilityheaderasc">
+						<img src="tribbie/tribbiea4.png" width="80px">
+						<div>
+							<h3>ASCENSION 4</h3>
+							<span class="ascname">Glass Ball with Wings!</span>
+							<p class="ability-desc">While the Zone lasts, Tribbie's Max HP increases by an amount equal to 9% of the sum of all ally characters' Max HP.</p>
+						</div>
+					</div>
+					
+					<div class="abilityheaderasc">
+						<img src="tribbie/tribbiea6.png" width="80px">
+						<div>
+							<h3>ASCENSION 6</h3>
+							<span class="ascname">Pebble at Crossroads?</span>
+							<p class="ability-desc">At the start of battle, Tribbie regenerates 30 Energy. After other ally targets attack, Tribbie regenerates 1.5 Energy for each target hit.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+<script>
+function openAbility(evt, abilityName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(abilityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>agyeidolons</title>
+<link href="../CSS/aglaea.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body id="eidolonpage">
+	<div id="menu">
+		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+	</div>
+	<div id="bg">
+		<img src="aglaea/bg.png" width="105%" height="10%">
+	</div>
+
+	<div id="box">
+		<div id="banner">
+			<img src="aglaea/agybanner.png" width="100%">
+		</div>
+
+	<div id="navigation">
+		<a href="aglaeainfo.html#info">CHARACTER INFO</a>
+		<a href="agyabilities.html#abilities">ABILITIES</a>
+		<a href="agybuild.html#build">BUILD</a>
+		<a href="agyeidolons.html#eidolons">EIDOLONS</a>
+		<a href="agyteam.html#team">TEAM COMPS</a>
+	</div>
+
+
+	<div id="eidolons">
+		<h2>EIDOLONS</h2>
+	</div>
+
+		<div class="eidolons-constellation">
+			<button class="eidolon-btn eido-1 lightbox-trigger" data-title="EIDOLON 1" data-subtitle="Drift at the Whim of Venus" data-desc="The enemy afflicted with 'Seam Stitch' takes 15% increased DMG. After Aglaea or Garmentmaker attacks this target, additionally regenerates 20 Energy.">
+			<img src="aglaea/agye1.png" alt="Eidolon I" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 1</span>
+				<span class="eido-sub">Drift at the Whim of Venus</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-2 lightbox-trigger" data-title="EIDOLON 2" data-subtitle="Sail on the Raft of Eyelids" data-desc="When Aglaea or Garmentmaker takes action, enables the DMG dealt by Aglaea and Garmentmaker to ignore 14% of the target's DEF. This effect stacks up to 3 time(s) and lasts until any unit, other than Aglaea or Garmentmaker, actively uses an ability.">
+			<img src="aglaea/agye2.png" alt="Eidolon II" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 2</span>
+				<span class="eido-sub">Sail on the Raft of Eyelids</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-3 lightbox-trigger" data-title="EIDOLON 3" data-subtitle="Bequeath in the Coalescence of Dew" data-desc="Skill Lv. +2, up to a maximum of Lv. 15.<br>Basic ATK Lv. +1, up to a maximum of Lv. 10.<br>Memosprite Talent Lv. +1, up to a maximum of Lv. 10.">
+			<img src="aglaea/agye3.png" alt="Eidolon III" width="550px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 3</span>
+				<span class="eido-sub">Bequeath in the Coalescence of Dew</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-4 lightbox-trigger" data-title="EIDOLON 4" data-subtitle="Flicker Below the Surface of Marble" data-desc="The SPD Boost effect from the Memosprite Talent has its max stack limit increased by 1. After Aglaea uses an attack, can also make Garmentmaker gain the SPD Boost effect from the Memosprite Talent.">
+			<img src="aglaea/agye4.png" alt="Eidolon IV" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 4</span>
+				<span class="eido-sub">Flicker Below the Surface of Marble</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-5 lightbox-trigger" data-title="EIDOLON 5" data-subtitle="Weave Under the Shroud of Woe" data-desc="Ultimate Lv. +2, up to a maximum of Lv. 15.<br>Talent Lv. +2, up to a maximum of Lv. 15.<br>Memosprite Skill Lv. +1, up to a maximum of Lv. 10.">
+			<img src="aglaea/agye5.png" alt="Eidolon V" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 5</span>
+				<span class="eido-sub">Weave Under the Shroud of Woe</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-6 lightbox-trigger" data-title="EIDOLON 6" data-subtitle="Fluctuate in the Tapestry of Fates" data-desc="While Aglaea is in 'Supreme Stance,' increases her and Garmentmaker's Lightning RES PEN by 20%. When Aglaea's or Garmentmaker's SPD is greater than 160/240/320, the Joint ATK DMG dealt by them increases by 10%/30%/60%.">
+			<img src="aglaea/agye6.png" alt="Eidolon VI" width="550px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 6</span>
+				<span class="eido-sub">Fluctuate in the Tapestry of Fates</span>
+			</span>
+		</button>
+		</div>
+	</div>
+
+	<div id="custom-lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+		<div class="lightbox-container" onclick="event.stopPropagation()">
+			<div class="lightbox-card">
+				<img id="lightbox-img" class="floating-img" src="" alt="Eidolon Art">
+				
+				<div class="lightbox-info1">
+					<h3 id="lightbox-title"></h3>
+					<h4 id="lightbox-subtitle"></h4>
+					<p id="lightbox-desc"></p>
+				</div>
+			</div>
+		
+			<div id="lightbox-outside-text">CLICK ANYWHERE TO CLOSE</div>
+		</div>
+	</div>
+
+	
+	<script>
+		const lightbox = document.getElementById('custom-lightbox');
+		const lightboxImg = document.getElementById('lightbox-img');
+		const lightboxTitle = document.getElementById('lightbox-title');
+		const lightboxSubtitle = document.getElementById('lightbox-subtitle');
+		const lightboxDesc = document.getElementById('lightbox-desc');
+
+		document.querySelectorAll('.lightbox-trigger').forEach(button => {
+			button.addEventListener('click', function() {
+				const img = this.querySelector('img');
+				lightboxImg.src = img.src;
+				lightboxTitle.innerText = this.getAttribute('data-title');
+				lightboxSubtitle.innerText = this.getAttribute('data-subtitle').toUpperCase();
+				lightboxDesc.innerHTML = this.getAttribute('data-desc');
+				
+				lightbox.style.display = 'flex';
+				setTimeout(() => {
+					lightbox.classList.add('active');
+				}, 10);
+			});
+		});
+
+		function closeLightbox() {
+			lightbox.classList.remove('active');
+			setTimeout(() => {
+				lightbox.style.display = 'none';
+			}, 400);
+		}
+	</script>
+
+</body>
+</html>

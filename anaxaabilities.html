@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>anaxaabilities</title>
+<link href="../CSS/anaxa.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="menu">
+		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+	</div>
+	<div id="bg">
+		<img src="anaxa/bg.png" width="105%" height="10%">
+	</div>
+	
+	<div id="box">
+		<div id="banner">
+			<img src="anaxa/anaxabanner.png" width="100%">
+		</div>
+		
+		<div id="navigation">
+			<a href="anaxainfo.html#info">CHARACTER INFO</a>
+			<a href="anaxaabilities.html#abilities">ABILITIES</a>
+			<a href="anaxabuild.html#build">BUILD</a>
+			<a href="anaxaeidolons.html#eidolons">EIDOLONS</a>
+			<a href="anaxateam.html#team">TEAM COMPS</a>
+		</div>
+		
+		<div id="abilities">
+			<h2>ABILITIES</h2>
+		</div>
+
+		<div class="abilities-container">
+			
+			<div class="sidebar-tabs">
+				<button class="tablinks active" onclick="openAbility(event, 'basic-attack')">Basic Attack</button>
+				<button class="tablinks" onclick="openAbility(event, 'skill')">Skill</button>
+				<button class="tablinks" onclick="openAbility(event, 'ultimate')">Ultimate</button>
+				<button class="tablinks" onclick="openAbility(event, 'technique')">Technique</button>
+				<button class="tablinks" onclick="openAbility(event, 'talent')">Talent</button>
+				<button class="tablinks" onclick="openAbility(event, 'ascension')">Ascension Bonus</button>
+			</div>
+
+			<div class="content-panel">
+				
+				<div id="basic-attack" class="tabcontent" style="display: block;">
+					<div class="ability-header">
+						<img src="anaxa/anaxaba.png" width="65px">
+						<div>
+							<h3>Pain, Brews Truth</h3>
+							<span class="ability-type">Basic Attack</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="anaxa/anaxaba.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Single Target]</p>
+					<p class="ability-stat"><strong>Toughness Break: 10</strong></p>
+					<p class="ability-desc">Deals <span class="highlight-dmg">Wind DMG</span> equal to <strong>50%/100%</strong> of Anaxa's ATK to one designated enemy.</p>
+				</div>
+
+				<div id="skill" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="anaxa/anaxaskill.png" width="65px">
+						<div>
+							<h3>Fractal, Exiles Fallacy</h3>
+							<span class="ability-type">Skill</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="anaxa/anaxaskill.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Bounce]</p>
+					<p class="ability-stat"><strong>Toughness Break: 10</strong></p>
+					<p class="ability-desc">Deals <span class="highlight-dmg">Wind DMG equal</span> to <strong>35%/ 70%</strong> of Anaxa's ATK to one designated enemy and additionally deals 4 instance(s) of DMG. Each instance of DMG deals  <span class="highlight-dmg">Wind DMG</span> equal to <strong>35%/ 70%</strong> of Anaxa's ATK to one random enemy, prioritizing Bouncing to enemy targets that have not been hit by this instance of Skill. When used, for each attackable enemy on the field, this Skill has its DMG dealt increased by 20%.</p>
+				</div>
+
+				<div id="ultimate" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="anaxa/anaxault.png" width="65px">
+						<div>
+							<h3>Sprouting Life Sculpts Earth</h3>
+							<span class="ability-type">Ultimate</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="anaxa/anaxault.gif" width="80%">
+					</div>
+					<p class="ability-tag">[AoE]</p>
+					<p class="ability-stat"><strong>Toughness Reduction: 20</strong></p>
+					<p class="ability-desc">Inflicts the "Sublimation" state on all enemies, then deals  <span class="highlight-dmg">Wind DMG equal</span> to <strong>80%/ 150%</strong> of Anaxa's ATK to all enemies. In the "Sublimation" state, the targets will be simultaneously inflicted with Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses, lasting until the start of the targets' turn. If the targets do not have Control RES, they are unable to take action in the "Sublimation" state.</p>
+				</div>
+
+				<div id="technique" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="anaxa/anaxatech.png" width="65px">
+						<div>
+							<h3>Prism of the Pupil</h3>
+							<span class="ability-type">Technique</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="anaxa/anaxatech.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Impair]</p>
+					<p class="ability-desc">After using Technique, inflicts the Terrified state on enemies in a set area. Terrified enemies will flee in a direction away from Anaxa for 10 second(s). When allies enter battle via actively attacking a Terrified enemy, it will always be considered as entering battle via attacking a Weakness. After entering battle, Anaxa applies 1 Weakness of the attacker's Type to every enemy target, lasting for 3 turn(s).</p>
+				</div>
+
+				<div id="talent" class="tabcontent" style="display: none;">
+					<div class="ability-header">
+						<img src="anaxa/anaxatalent.png" width="65px">
+						<div>
+							<h3>Tetrad Wisdom Reigns Thrice</h3>
+							<span class="ability-type">Talent</span>
+						</div>
+					</div>
+					<div class="ability-image">
+						<img src="anaxa/anaxaskill.gif" width="80%">
+					</div>
+					<p class="ability-tag">[Impair]</p>
+					<p class="ability-desc">Each time Anaxa lands 1 hit on enemy targets, inflicts 1 Weakness of a random Type to the targets, lasting for 3 turn(s), with priority to the Weakness Type that the target doesn't already possess. While Anaxa is on the field, inflicts the "Qualitative Disclosure" state on enemy targets that have at least 5 different Types of Weaknesses. Anaxa deals 18%/ 28.5% increased DMG to targets afflicted with the "Qualitative Disclosure" state. In addition, after using Basic ATK or Skill on them, unleashes 1 additional instance of Skill on the targets. This additional Skill does not consume any Skill Points and cannot trigger this effect again. If the target has been defeated before the additional Skill is used, it will be cast on one random enemy instead.</p>
+				</div>
+
+				<div id="ascension" class="tabcontent" style="display:none;">
+					<div class="abilityheaderasc">
+						<img src="anaxa/anaxaa2.png" width="80px">
+						<div>
+							<h3>ASCENSION 2</h3>
+							<span class="ascname">Roaming Signifier</span>
+							<p class="ability-desc">When using Basic ATK, additionally regenerates 10 Energy. At the start of the turn, if there are no enemy targets in the "Qualitative Disclosure" state, immediately regenerates 30 Energy.</p>
+						</div>
+					</div>
+					
+					<div class="abilityheaderasc">
+						<img src="anaxa/anaxaa4.png" width="80px">
+						<div>
+							<h3>ASCENSION 4</h3>
+							<span class="ascname">Imperative Hiatus</span>
+							<p class="ability-desc">Based on the number of "Erudition" characters in the team, one of the following effects will be triggered in the current battle: 1 character: Increases Anaxa's CRIT DMG by 140%. At least 2 characters: Increases DMG dealt by all allies by 50%.</p>
+						</div>
+					</div>
+					
+					<div class="abilityheaderasc">
+						<img src="anaxa/anaxaa6.png" width="80px">
+						<div>
+							<h3>ASCENSION 6</h3>
+							<span class="ascname">Qualitative Shift</span>
+							<p class="ability-desc">For every 1 different Weakness Type an enemy target has, the DMG that Anaxa deals to that target ignores 10% of their DEF. Up to a max of 7 Weakness Types can be taken into account for this effect.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+			
+		<div id="box2">
+		</div>	
+		
+	</div>
+
+<script>
+function openAbility(evt, abilityName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(abilityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>

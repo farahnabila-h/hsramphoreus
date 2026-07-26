@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>evernighteidolons</title>
+<link href="../CSS/evernight.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="eidolonpage">
+	<div id="menu">
+		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+	</div>
+	<div id="bg">
+		<img src="evernight/bg.png" width="105%" height="10%">
+	</div>
+
+	<div id="box">
+		<div id="banner">
+			<img src="evernight/evernightbanner.png" width="100%">
+		</div>
+
+	<div id="navigation">
+		<a href="evernightinfo.html#info">CHARACTER INFO</a>
+		<a href="evernightabilities.html#abilities">ABILITIES</a>
+		<a href="evernightbuild.html#build">BUILD</a>
+		<a href="evernighteidolons.html#eidolons">EIDOLONS</a>
+		<a href="evernightteam.html#team">TEAM COMPS</a>
+	</div>
+
+
+	<div id="eidolons">
+		<h2>EIDOLONS</h2>
+	</div>
+
+		<div class="eidolons-constellation">
+		  <button class="eidolon-btn eido-1 lightbox-trigger" data-title="EIDOLON 1" data-subtitle="Sleep Tight, the Night Dreams Long" data-desc="When Evernight is on the field and when there are 4 or more/3/2/1 enemy targets on the field, ally memosprites deal 120%/125%/130%/150% of their original DMG respectively.">
+			<img src="evernight/evernighte1.png" alt="Eidolon I" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 1</span>
+				<span class="eido-sub">Sleep Tight, the Night Dreams Long</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-2 lightbox-trigger" data-title="EIDOLON 2" data-subtitle="Listen Up, the Slumber Speaks Soft" data-desc="Increases Evernight's and memosprite Evey's CRIT DMG by 40%. Each time Evernight gains ‘Memoria’, increases the gained 'Memoria' by 2 point(s). When using Ultimate, additionally gains 2 ‘Darkest Riddle’ state Charge(s)."> 
+			<img src="evernight/evernighte2.png" alt="Eidolon II" width="450px">
+			<span class="eido-text">
+			<span class="eido-title-text">EIDOLON 2</span>
+			<span class="eido-sub">Listen Up, the Slumber Speaks Soft</span>
+		</span>
+		</button>
+
+		<button class="eidolon-btn eido-3 lightbox-trigger" data-title="EIDOLON 3" data-subtitle="Fear Not, the Nightmare Lies Past" data-desc="Skill Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10. Memosprite Talent Lv. +1, up to a maximum of Lv. 10.">
+			<img src="evernight/evernighte3.png" alt="Eidolon III" width="550px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 3</span>
+				<span class="eido-sub">Fear Not, the Nightmare Lies Past</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-4 lightbox-trigger" data-title="EIDOLON 4" data-subtitle="Wake Up, the Tomorrow is Yours" data-desc="While Evernight is on the field, ally memosprites' Weakness Break Efficiency increases by 25%, and memosprite Evey gains an additional 25% Weakness Break Efficiency.">
+			<img src="evernight/evernighte4.png" alt="Eidolon IV" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 4</span>
+				<span class="eido-sub">Wake Up, the Tomorrow is Yours</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-5 lightbox-trigger" data-title="EIDOLON 5" data-subtitle="Let Go, the 'Me' in Memories" data-desc="Ultimate Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15. Memosprite Skill Lv. +1, up to a maximum of Lv. 10.">
+			<img src="evernight/evernighte5.png" alt="Eidolon V" width="450px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 5</span>
+				<span class="eido-sub">Let Go, the 'Me' in Memories</span>
+			</span>
+		</button>
+
+		<button class="eidolon-btn eido-6 lightbox-trigger" data-title="EIDOLON 6" data-subtitle="Like This, Always" data-desc="While Evernight is on the field, all allies' All-Type RES PEN increases by 20%. After memosprite Evey uses ‘Dream, Dissolving, as Dew’, Evernight gains 30% of the consumed ‘Memoria’ in this attack.">
+			<img src="evernight/evernighte6.png" alt="Eidolon VI" width="550px">
+			<span class="eido-text">
+				<span class="eido-title-text">EIDOLON 6</span>
+				<span class="eido-sub">Like This, Always</span>
+			</span>
+		</button>
+		</div>
+	</div>
+
+	<div id="custom-lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+		<div class="lightbox-container" onclick="event.stopPropagation()">
+			<div class="lightbox-card">
+				<img id="lightbox-img" class="floating-img" src="" alt="Eidolon Art">
+				
+				<div class="lightbox-info1">
+					<h3 id="lightbox-title"></h3>
+					<h4 id="lightbox-subtitle"></h4>
+					<p id="lightbox-desc"></p>
+				</div>
+			</div>
+		
+			<div id="lightbox-outside-text">CLICK ANYWHERE TO CLOSE</div>
+		</div>
+	</div>
+
+	
+	<script>
+		const lightbox = document.getElementById('custom-lightbox');
+		const lightboxImg = document.getElementById('lightbox-img');
+		const lightboxTitle = document.getElementById('lightbox-title');
+		const lightboxSubtitle = document.getElementById('lightbox-subtitle');
+		const lightboxDesc = document.getElementById('lightbox-desc');
+
+		document.querySelectorAll('.lightbox-trigger').forEach(button => {
+			button.addEventListener('click', function() {
+				const img = this.querySelector('img');
+				lightboxImg.src = img.src;
+				lightboxTitle.innerText = this.getAttribute('data-title');
+				lightboxSubtitle.innerText = this.getAttribute('data-subtitle').toUpperCase();
+				lightboxDesc.innerHTML = this.getAttribute('data-desc');
+				
+				lightbox.style.display = 'flex';
+				setTimeout(() => {
+					lightbox.classList.add('active');
+				}, 10);
+			});
+		});
+
+		function closeLightbox() {
+			lightbox.classList.remove('active');
+			setTimeout(() => {
+				lightbox.style.display = 'none';
+			}, 400);
+		}
+	</script>
+
+</body>
+</html>
