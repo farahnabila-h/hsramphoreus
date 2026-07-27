@@ -8,35 +8,58 @@
 
 <body>
 	<div id="bg">
-	<img src="castorice/casbg.png" width="105%" height="10%">
-</div>
+		<img src="castorice/casbg.png" width="105%" height="10%">
+	</div>
 <div id="box">
-<div id="banner">
-	<div id="menu">
-		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+	<div id="banner" class="scroll-reveal">
+		<div id="menu">
+			<a href="index.html#char-section"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+		</div>
+		<img src="castorice/casbanner.png" width="100%">
 	</div>
-	<img src="castorice/casbanner.png" width="100%">
-</div>
-	
-<div id="navigation">
-	<a href="casinfo.html#info">CHARACTER INFO</a>
-	<a href="casabilities.html#abilities">ABILITIES</a>
-	<a href="casbuild.html#build">BUILD</a>
-	<a href="caseidolons.html#eidolons">EIDOLONS</a>
-	<a href="casteam.html#team">TEAM COMPS</a>
-</div>
+		
+	<div id="navigation" class="scroll-reveal">
+		<a href="casinfo.html#info">CHARACTER INFO</a>
+		<a href="casabilities.html#abilities">ABILITIES</a>
+		<a href="casbuild.html#build">BUILD</a>
+		<a href="caseidolons.html#eidolons">EIDOLONS</a>
+		<a href="casteam.html#team">TEAM COMPS</a>
+	</div>
 
-	<div id="info">
-    <h2>CHARACTER INFO</h2>
-	<div class="img">
-    <span class="img1"><img src="castorice/cassplash.png" width="500px"></span>
-	<span class="img2"><img src="castorice/casinfo.png" width="700px"></span>
+	<div id="info" class="scroll-reveal">
+		<h2>CHARACTER INFO</h2>
+		<div class="img">
+			<span class="img1"><img src="castorice/cassplash.png" width="500px"></span>
+			<span class="img2"><img src="castorice/casinfo.png" width="700px"></span>
+		</div>
+		<p class="description">"Servant of Death",Castorice. The land that reveres death, Aidonia, where snow falls endlessly, has today drifted into a sweet slumber. Castorice, daughter of the River of Souls, Chrysos Heir in search of "Death" Coreflame, sets forth. You must guard the lament of souls and embrace the solitude of destiny. Life and death are but a journey. When butterfly alights on the branch, what withers will bloom anew.</p>
 	</div>
-    <p class="description">"Servant of Death",Castorice. The land that reveres death, Aidonia, where snow falls endlessly, has today drifted into a sweet slumber. Castorice, daughter of the River of Souls, Chrysos Heir in search of "Death" Coreflame, sets forth. You must guard the lament of souls and embrace the solitude of destiny. Life and death are but a journey. When butterfly alights on the branch, what withers will bloom anew.</p>
-</div>
 
 	<div id="box2">
-ㅤ	</div>
+		ㅤ
+	</div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+        observer.observe(el);
+    });
+});
+</script>
 </body>
 </html>

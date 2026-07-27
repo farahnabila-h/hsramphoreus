@@ -5,7 +5,7 @@ body {background:#6683C2}
 #eidolonpage {background: linear-gradient(to bottom, #6683C2 38%,#686692,#2A2649);
 			  min-height:260vh;
 			  margin: 0;}
-#box{background-color: rgba(248, 241, 214, 0); width: 1250px;margin:-600px auto 0px auto;}
+#box{background-color: rgba(248, 241, 214, 0); width: 1250px;margin:-720px auto 0px auto;}
 #bg img {z-index: 1;margin-left:-10px;margin-top:-10px}
 #banner {z-index: 50;margin-left:30px;margin-top:-40px}
 
@@ -912,7 +912,18 @@ html {scroll-behavior: smooth}
 	margin-bottom:100px
 }
 
+/* Page Load Slide Up Animation */
+@keyframes pageSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-
-
-
+.page-load-slide {
+    animation: pageSlideUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}

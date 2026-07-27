@@ -7,18 +7,18 @@
 </head>
 
 <body>
-	<div id="bg">
+	<div id="bg" class="page-load-up">
 	<img src="anaxa/anaxabg.png" width="105%" height="10%">
 </div>
 <div id="box">
-<div id="banner">
+<div id="banner" class="page-load-up">
 	<div id="menu">
-		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+		<a href="index.html#char-section"><img src="aglaea/menu.png" alt="Home" width="55px"></a>
 	</div>
 	<img src="anaxa/anaxabanner.png" width="100%">
 </div>
 	
-<div id="navigation">
+<div id="navigation" class="page-load-up">
 	<a href="anaxainfo.html#info">CHARACTER INFO</a>
 	<a href="anaxaabilities.html#abilities">ABILITIES</a>
 	<a href="anaxabuild.html#build">BUILD</a>
@@ -26,17 +26,40 @@
 	<a href="anaxateam.html#team">TEAM COMPS</a>
 </div>
 
-	<div id="info">
+	<div id="info" class="page-load-up">
     <h2>CHARACTER INFO</h2>
-	<div class="img">
+	<div class="img scroll-slide-up">
     <span class="img1"><img src="anaxa/anaxasplash.png" width="500px"></span>
 	<span class="img2"><img src="anaxa/anaxainfo.png" width="700px"></span>
 	</div>
-    <p class="description">The Grove of Epiphany, where knowledge flourishes and philosophers are born. Yet here stands Anaxagoras the blasphemer, the Chrysos Heir who challenges the Coreflame of Reason. He is questioned: Would you defy the prophecy even if you must bear infamy, and insist on driving the thorns of doubt into the Sacred Tree of wisdom? "Ridiculous. In a world full of lies, I am the only truth."</p>
+    <p class="description scroll-slide-up-delayed">The Grove of Epiphany, where knowledge flourishes and philosophers are born. Yet here stands Anaxagoras the blasphemer, the Chrysos Heir who challenges the Coreflame of Reason. He is questioned: Would you defy the prophecy even if you must bear infamy, and insist on driving the thorns of doubt into the Sacred Tree of wisdom? "Ridiculous. In a world full of lies, I am the only truth."</p>
 </div>
 
 	<div id="box2">
-ㅤ	</div>
+    </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.05
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active-slide');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-slide-up, .scroll-slide-up-delayed').forEach(el => {
+        observer.observe(el);
+    });
+});
+</script>
 </body>
 </html>

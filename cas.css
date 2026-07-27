@@ -5,7 +5,7 @@ body {background:#55218D}
 #eidolonpage {background: linear-gradient(to bottom, #55218D 38%,#686692,#2A2649);
 			  min-height:260vh;
 			  margin: 0;}
-#box{background-color: rgba(248, 241, 214, 0); width: 1250px;margin:-600px auto 0px auto;}
+#box{background-color: rgba(248, 241, 214, 0); width: 1250px;margin:-720px auto 0px auto;}
 #bg img {z-index: 1;margin-left:-10px;margin-top:-10px}
 #banner {z-index: 50;margin-left:30px;}
 

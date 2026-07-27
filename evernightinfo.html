@@ -11,14 +11,14 @@
 	<img src="evernight/evernightbg.png" width="105%" height="10%">
 </div>
 <div id="box">
-<div id="banner">
+<div id="banner" class="slide-up-item" style="animation-delay: 0.1s;">
 	<div id="menu">
-		<a href="index.html"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
-	</div>
-	<img src="evernight/evernightbanner.png" width="100%">
+			<a href="index.html#char-section"><img src="aglaea/menu.png" alt="Home" width="80px"></a>
+		</div>
+	<img src="evernight/evernightbanner.png" width="100%" class="slide-up-item" style="animation-delay: 0.1s;">
 </div>
 	
-<div id="navigation">
+<div id="navigation" class="slide-up-item" style="animation-delay: 0.25s;">
 	<a href="evernightinfo.html#info">CHARACTER INFO</a>
 	<a href="evernightabilities.html#abilities">ABILITIES</a>
 	<a href="evernightbuild.html#build">BUILD</a>
@@ -26,7 +26,7 @@
 	<a href="evernightteam.html#team">TEAM COMPS</a>
 </div>
 
-	<div id="info">
+	<div id="info" class="slide-up-item" style="animation-delay: 0.4s;">
     <h2>CHARACTER INFO</h2>
 	<div class="img">
     <span class="img1"><img src="evernight/evernightsplash.png" width="500px"></span>
@@ -38,5 +38,20 @@
 	<div id="box2">
 ㅤ	</div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+        observer.observe(el);
+    });
+});
+</script>
 </body>
 </html>
