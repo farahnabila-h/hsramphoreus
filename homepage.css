@@ -6,6 +6,101 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
+}
+
+#intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1625;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOutOverlay 0.8s ease 2.2s forwards;
+    pointer-events: none;
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-symbol img {
+    width: 90px;
+    height: auto;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: zoomInSymbol 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s forwards;
+    filter: drop-shadow(0 0 15px rgba(240, 224, 145, 0.7));
+}
+
+.intro-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    color: #FFFFFF;
+    letter-spacing: 6px;
+    margin: 20px 0 10px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpTitle 0.8s ease 0.8s forwards;
+}
+
+.intro-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #bfa15f;
+    letter-spacing: 3px;
+    margin: 0;
+    opacity: 0;
+    animation: fadeInSubtitle 0.8s ease 1.2s forwards;
+}
+
+@keyframes zoomInSymbol {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUpTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSubtitle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutOverlay {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 #wrapper {
@@ -221,7 +316,7 @@ body {
     font-size: 19px;
     line-height: 1.8;
     text-align: justify;
-    margin-top: 15;
+    margin-top: 15px;
 }
 
 #paragraph3 {
