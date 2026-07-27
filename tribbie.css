@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 body {background:#C7BCBC}
-#menu a {margin-left:50px;margin-top:-10px}
+#menu a {margin-left:50px;margin-top:-10px;z-index: 100px}
 #eidolonpage {background: linear-gradient(to bottom, #C7BCBC 38%,#686692,#2A2649);
 			  min-height:260vh;
 			  margin: 0;}
