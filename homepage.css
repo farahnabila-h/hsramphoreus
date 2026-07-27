@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    animation: fadeOutOverlay 0.8s ease 2.2s forwards;
+    animation: fadeOutOverlay 1.0s ease 3.0s forwards;
     pointer-events: none;
 }
 
